@@ -1,9 +1,8 @@
 #ifndef SAPSIM_PLAYER_H
 #define SAPSIM_PLAYER_H
-#include <list>
 
-#include "Food.h"
-#include "Pet.h"
+#include "Party.h"
+#include "Shop.h"
 
 namespace SAPSim {
 
@@ -13,17 +12,8 @@ class Player {
   int life;
   int wins;
   int turn;
-  std::list<Pet> party;
-  struct ShopPet {
-    bool frozen;
-    Pet pet;
-  };
-  struct ShopFood {
-    bool frozen;
-    Food food;
-  };
-  std::list<ShopPet> pet_shop;
-  std::list<ShopFood> food_shop;
+  Party party;
+  Shop shop;
 
  public:
   int buy_pet(int shop_idx, int party_idx);

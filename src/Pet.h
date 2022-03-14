@@ -27,6 +27,8 @@ class Pet {
   void merge(Pet pet);
   Ability get_ability();
   int get_cost();
+  int get_level();
+  void faint();
 };
 
 class PetFactory {
