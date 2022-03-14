@@ -12,23 +12,23 @@ const struct Pack {
 };
 
 enum class AbilityKeyword {
-  Faint,
-  Buy,
-  Sell,
+  Faint,  // Called in Pet::faint()
+  Buy,    // Called in Player::buy()
+  Sell,   // Called in Player::sell()
   EatsShopFood,
-  EndOfTurn,
-  LevelUp,
-  FoodBought,
-  FriendSummoned,
+  EndOfTurn,       // Called in Player::end_turn()
+  LevelUp,         // Called in Pet::merge()
+  FoodBought,      // Called in Player::buy_food()
+  FriendSummoned,  // Called in Party::add()
   StartOfBattle,
   StartOfTurn,
   BeforeAttack,
   Hurt,
-  FriendSold,
-  EndTurn,
+  FriendSold,  // Called in Player::sell()
+  EndTurn,     // Called in Player::end_turn()
   FriendAheadAttacks,
   FriendAheadAbility,
-  FriendFaints,
+  FriendFaints,  // Called in Pet::faint()
 };
 
 }  // namespace SAPSim

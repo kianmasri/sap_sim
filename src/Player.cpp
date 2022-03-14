@@ -7,7 +7,7 @@ int Player::buy_pet(int shop_idx, int party_idx) {
   auto pet = shop.get_pet(shop_idx);
   if (gold >= pet.get_cost()) {
     gold -= pet.get_cost();
-    party.add_pet(party_idx, pet);
+    party.add(party_idx, pet);
   }
 }
 
@@ -22,8 +22,8 @@ int Player::buy_food(int shop_idx, int party_idx) {
 
 // TODO: Implement Ability keywords: Sell, FriendSold
 void Player::sell(int party_idx) {
-  gold += party.get_pet(party_idx).get_level();
-  party.remove_pet(party_idx);
+  gold += party.get(party_idx).get_level();
+  party.remove(party_idx);
 }
 
 void Player::roll() {
@@ -32,5 +32,13 @@ void Player::roll() {
     shop.refresh();
   }
 }
+
+void Player::freeze(int shop_idx) { shop.freeze(shop_idx); }
+
+void Player::move(int src_idx, int dest_idx) { party.move(src_idx, dest_idx); }
+
+void Player::merge(int src_idx, int dest_idx) { party.merge(src_idx, dest_idx); }
+
+void Player::end_turn() {}
 
 }  // namespace SAPSim

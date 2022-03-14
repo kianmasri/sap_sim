@@ -11,9 +11,11 @@ class Party {
   std::list<Pet> party;
 
  public:
-  void add_pet(int idx, Pet pet);
-  void remove_pet(int idx);
-  Pet get_pet(int idx);
+  void add(int idx, Pet pet);
+  void remove(int idx);
+  void move(int src, int dest);
+  void merge(int src, int dest);
+  Pet get(int idx);
 };
 }  // namespace SAPSim
 

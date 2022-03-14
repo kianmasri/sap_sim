@@ -25,6 +25,7 @@ class Shop {
   Pet get_pet(int idx);
   Food get_food(int idx);
   void refresh();
+  void freeze(int idx);
 };
 
 }  // namespace SAPSim
