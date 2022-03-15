@@ -12,7 +12,7 @@ const struct Pack {
 };
 
 enum class AbilityKeyword {
-  Faint,  // Called in Pet::faint()
+  Faint,  // Called in Party::faint()
   Buy,    // Called in Player::buy()
   Sell,   // Called in Player::sell()
   EatsShopFood,

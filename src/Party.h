@@ -16,7 +16,9 @@ class Party {
   void move(int src, int dest);
   void merge(int src, int dest);
   Pet get(int idx);
+  void faint(int idx);
 };
+
 }  // namespace SAPSim
 
 #endif

@@ -28,7 +28,6 @@ class Pet {
   Ability get_ability();
   int get_cost();
   int get_level();
-  void faint();
 };
 
 class PetFactory {

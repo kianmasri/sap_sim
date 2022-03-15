@@ -37,7 +37,9 @@ void Player::freeze(int shop_idx) { shop.freeze(shop_idx); }
 
 void Player::move(int src_idx, int dest_idx) { party.move(src_idx, dest_idx); }
 
-void Player::merge(int src_idx, int dest_idx) { party.merge(src_idx, dest_idx); }
+void Player::merge(int src_idx, int dest_idx) {
+  party.merge(src_idx, dest_idx);
+}
 
 void Player::end_turn() {}
 
